@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"  # Exposing port 80 on your local machine
+    volumes:
+      - ./:/usr/share/nginx/html  # Mounting the entire root directory to the nginx html directory
+    restart: always
